@@ -46,6 +46,7 @@ export default {
 			transform: scale(1)
 img.contact-image-person
 	aspect-ratio: 1.32
+	border-radius: 123px / 123px
 	width: 100%
 	max-height: 452px
 </style>
