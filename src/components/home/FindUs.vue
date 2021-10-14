@@ -7,7 +7,7 @@
 					<img src="/img/backgrounds/bg-2.jfif" alt="Graha Wibisana" class="my-8">
 					<!-- <img src="https://betterstudio.com/wp-content/uploads/2019/05/1-1-instagram-1024x1024.jpg" alt="Graha Wibisana" class=""> -->
           <div class="loc-desc">
-            <h2 class="font-black title-text">Bandung</h2>
+            <h2 class="font-black title-text leading-loose">Bandung</h2>
             <h4 class="font-normal text-4xl">Jl. Aceh No. 45 <br> Mon - Sun <br>11.00 - 20.00</h4>
           </div>
 				</div>
@@ -17,7 +17,7 @@
 					<img src="/img/backgrounds/bg-3.jfif" alt="Graha Wibisana" class="my-8">
 					<!-- <img src="https://betterstudio.com/wp-content/uploads/2019/05/1-1-instagram-1024x1024.jpg" alt="Graha Wibisana" class=""> -->
           <div class="loc-desc">
-            <h2 class="font-black title-text">Bandung</h2>
+            <h2 class="font-black title-text leading-loose">Bandung</h2>
             <h4 class="font-normal text-4xl">Jl. Karasak No. 109 <br> Mon - Sun <br>11.00 - 20.00</h4>
           </div>
 				</div>
