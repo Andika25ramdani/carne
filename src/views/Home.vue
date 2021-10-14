@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Banner />
     <Begining />
     <FindUs />
     <BestMenu />
@@ -10,6 +11,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import Banner from '@/components/home/Banner.vue'
 import Begining from '@/components/home/Begining.vue'
 import BestMenu from '@/components/home/BestMenu.vue'
 import Contact from '@/components/home/Contact.vue'
@@ -18,7 +20,7 @@ import FindUs from '@/components/home/FindUs.vue'
 export default {
   name: 'Home',
   components: {
-    Begining, BestMenu, Contact, FindUs
+    Banner, Begining, BestMenu, Contact, FindUs
   }
 }
 </script>
