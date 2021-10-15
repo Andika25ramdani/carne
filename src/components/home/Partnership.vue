@@ -26,6 +26,7 @@ export default {
 
 <style lang="sass">
 .partnership img
+  width: 100%
   max-width: 345px
   height: 100%
   margin: 0 auto

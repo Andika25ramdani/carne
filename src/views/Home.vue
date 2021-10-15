@@ -6,6 +6,7 @@
     <CantVisit />
     <Available />
     <Partnership />
+    <Activity />
     <BestMenu />
     <Contact />
   </div>
@@ -13,7 +14,7 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Activity from '@/components/home/Activity.vue'
 import Available from '@/components/home/Available.vue'
 import Banner from '@/components/home/Banner.vue'
 import Begining from '@/components/home/Begining.vue'
@@ -26,7 +27,7 @@ import Partnership from '@/components/home/Partnership.vue'
 export default {
   name: 'Home',
   components: {
-    Available, Banner, Begining, BestMenu, CantVisit, Contact, FindUs, Partnership
+    Activity, Available, Banner, Begining, BestMenu, CantVisit, Contact, FindUs, Partnership
   }
 }
 </script>
