@@ -3,6 +3,7 @@
     <Banner />
     <Begining />
     <FindUs />
+    <CantVisit />
     <Available />
     <BestMenu />
     <Contact />
@@ -16,13 +17,14 @@ import Available from '@/components/home/Available.vue'
 import Banner from '@/components/home/Banner.vue'
 import Begining from '@/components/home/Begining.vue'
 import BestMenu from '@/components/home/BestMenu.vue'
+import CantVisit from '@/components/home/CantVisit.vue'
 import Contact from '@/components/home/Contact.vue'
 import FindUs from '@/components/home/FindUs.vue'
 
 export default {
   name: 'Home',
   components: {
-    Available, Banner, Begining, BestMenu, Contact, FindUs
+    Available, Banner, Begining, BestMenu, CantVisit, Contact, FindUs
   }
 }
 </script>

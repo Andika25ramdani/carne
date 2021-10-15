@@ -1,20 +1,22 @@
 <template>
-  <section class="available text-green px-4 sm:px-8 md:px-16 lg:px-32 py-16">
-		<h2 class="font-black title-text px-8 sm:px-16 md:px-0">Oh no! You Can’t Visit Us?!</h2>
-		<h3 class="subtitle-text py-4 md:py-0 md:pb-4 px-8 sm:px-16 md:px-0">No Worry We Got You Covered</h3>
-		<div class="visit-section">
-			<p class="text-default px-8 sm:px-16 md:px-0">with our partner, now you can have the best of our meats send straight to your house!</p>
-			<img src="/img/backgrounds/7.png" alt="Take Away Service" class="contact-figure w-11/12 sm:w-10/12 md:w-6/12 mx-auto md:mr-0 md:ml-auto mt-12 md:-mt-8">
-			<div class="flex flex-col items-center md:float-left mt-8 md:-mt-12">
-				<a href="" class="flex-none">
-					<img src="/img/holders/grabfood.png" alt="Book GrabFood" class="image-link px-4 sm:px-8 md:px-0 md:pr-12 lg:pr-8 xl:pr-4">
-				</a>
-				<a href="" class="flex-none">
-					<img src="/img/holders/gofood.png" alt="Book gofood" class="image-link px-4 sm:px-8 md:px-0 md:pr-12 lg:pr-8 xl:pr-4">
-				</a>
-				<!-- <a href="" class="flex-1">
-					<img src="" alt="Book GrabFood">
-				</a> -->
+  <section class="available bg-green text-white text-right flex flex-col sm:flex-row items-center p-8 sm:p-0">
+		<img src="/img/backgrounds/8.png" alt="Party" class="mx-auto">
+		<div class="flex flex-col w-5/6 sm:w-full sm:py-4 sm:pr-4 md:py-8 md:pr-8 lg:my-12 lg:mr-12 xl:my-16 xl:mr-16">
+			<h2 class="font-black title-text py-6 sm:pb-12 border-b-4 border-white">Do You Like to Party? Level Up Your Game With Carne To Impress Everyone Bellys</h2>
+			<h3 class="font-black subtitle-text py-6 sm:py-12">We Are Available For</h3>
+			<div class="flex flex-row flex-nowrap w-full justify-between">
+				<ul class="list-none list-outside">
+					<li class="subtitle-text font-bold">Collaboration</li>
+					<li class="subtitle-text font-light">Coffee Shop</li>
+					<li class="subtitle-text font-light">Restaurant</li>
+					<li class="subtitle-text font-light">Bar/Lounge</li>
+				</ul>
+				<ul class="list-none list-outside">
+					<li class="subtitle-text font-bold">Private Event</li>
+					<li class="subtitle-text font-light">Wedding</li>
+					<li class="subtitle-text font-light">Barbecue Night</li>
+					<li class="subtitle-text font-light">Private Party</li>
+				</ul>
 			</div>
 		</div>
 	</section>
@@ -27,17 +29,9 @@ export default {
 </script>
 
 <style lang="sass">
-.available
-	background: url('/img/backgrounds/6.png') no-repeat center center scroll
-	background-size: auto
-	background-color: rgba(255, 255, 255, .85)
-	background-blend-mode: lighten
-.visit-section
-	p
-		max-width: 625px
-		@media screen and (min-width: 768px)
-			max-width: 55%
-	img.image-link
-		height: 100%
-		max-width: 10rem
+.available img
+	width: 81%
+	object-fit: contain
+	@media screen and (min-width: 640px)
+		width: 51%
 </style>

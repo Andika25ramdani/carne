@@ -1,8 +1,8 @@
 <template>
   <section class="find-us text-white pb-16">
     <h2 class="font-black text-center title-text pt-8 pb-16">Where To Find Us?</h2>
-		<div class="flex flex-1 flex-col md:flex-row justify-evenly gap-y-16 mx-auto">
-			<figure class="loc-figure w-7/12 md:w-5/12 mx-auto md:mx-0">
+		<div class="flex flex-1 flex-col sm:flex-row justify-evenly gap-y-16 mx-auto">
+			<figure class="loc-figure w-7/12 sm:w-5/12 mx-auto sm:mx-0">
 				<div class="loc-image">
 					<img src="/img/backgrounds/4.png" alt="Graha Wibisana" class="my-8">
 					<!-- <img src="https://betterstudio.com/wp-content/uploads/2019/05/1-1-instagram-1024x1024.jpg" alt="Graha Wibisana" class=""> -->
@@ -12,7 +12,7 @@
           </div>
 				</div>
 			</figure>
-			<figure class="loc-figure w-7/12 md:w-5/12 mx-auto md:mx-0">
+			<figure class="loc-figure w-7/12 sm:w-5/12 mx-auto sm:mx-0">
 				<div class="loc-image">
 					<img src="/img/backgrounds/5.png" alt="Graha Wibisana" class="my-8">
 					<!-- <img src="https://betterstudio.com/wp-content/uploads/2019/05/1-1-instagram-1024x1024.jpg" alt="Graha Wibisana" class=""> -->

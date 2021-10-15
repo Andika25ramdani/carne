@@ -1,8 +1,8 @@
 <template>
 	<section class="contact text-white bg-green pb-16">
 		<h2 class="font-black text-center title-text pt-8 pb-6">Contact</h2>
-		<div class="flex flex-1 flex-col md:flex-row justify-evenly gap-y-16 mx-auto">
-			<figure class="contact-figure w-7/12 md:w-5/12 mx-auto md:mx-0">
+		<div class="flex flex-1 flex-col sm:flex-row justify-evenly gap-y-16 mx-auto">
+			<figure class="contact-figure w-7/12 sm:w-5/12 mx-auto sm:mx-0">
 				<img src="/img/peoples/people-1.jpg" alt="Ghani Husnan Afdhaluddin" class="contact-image-person my-8">
 				<h2 class="font-black title-text">Ghani Husnan Afdhaluddin</h2>
 				<h3 class="subtitle-text font-medium">Co-Founder & CEO</h3>
@@ -10,7 +10,7 @@
 					<h4 class="font-normal text-default">0821 2164 3817</h4>
 				</a>
 			</figure>
-			<figure class="contact-figure w-7/12 md:w-5/12 mx-auto md:mx-0">
+			<figure class="contact-figure w-7/12 sm:w-5/12 mx-auto sm:mx-0">
 				<img src="/img/peoples/people-2.jpg" alt="Graha Wibisana" class="contact-image-person my-8">
 				<h2 class="font-black title-text">Graha<br>Wibisana</h2>
 				<h3 class="subtitle-text font-medium">Co-Founder & CEO</h3>
