@@ -1,21 +1,15 @@
 <template>
 	<section class="contact text-white bg-green py-16">
-		<h2 class="font-black text-center title-text pb-6">Contact</h2>
+		<transition name="slide-up">
+			<h2 v-if="contentActive" class="font-black text-center title-text pb-6">Contact</h2>
+		</transition>
 		<div class="flex flex-1 flex-col sm:flex-row justify-evenly gap-y-8 sm:gap-y-16 mx-auto">
-			<figure class="contact-figure w-7/12 sm:w-5/12 mx-auto sm:mx-0">
-				<img src="/img/peoples/people-1.jpg" alt="Ghani Husnan Afdhaluddin" class="contact-image-person my-4 sm:my-8">
-				<h2 class="font-black title-text">Ghani Husnan Afdhaluddin</h2>
-				<h3 class="subtitle-text font-medium">Co-Founder & CEO</h3>
-				<a href="tel:+6282121643817">
-					<h4 class="font-normal text-default">0821 2164 3817</h4>
-				</a>
-			</figure>
-			<figure class="contact-figure w-7/12 sm:w-5/12 mx-auto sm:mx-0">
-				<img src="/img/peoples/people-2.jpg" alt="Graha Wibisana" class="contact-image-person my-4 sm:my-8">
-				<h2 class="font-black title-text">Graha<br>Wibisana</h2>
-				<h3 class="subtitle-text font-medium">Co-Founder & CEO</h3>
-				<a href="tel:+6281223262607">
-					<h4 class="font-normal text-default">0812 2326 2607</h4>
+			<figure v-for="contact in contacts" :key=contact.id class="contact-figure w-7/12 sm:w-5/12 mx-auto sm:mx-0">
+				<img :src=contact.img :alt=contact.name class="contact-image-person my-4 sm:my-8">
+				<h2 class="font-black title-text">{{ contact.name }}</h2>
+				<h3 class="subtitle-text font-medium">{{ contact.post }}</h3>
+				<a :href="'tel:+62'+contact.phone">
+					<h4 class="font-normal text-default">0{{ contact.phone }}</h4>
 				</a>
 			</figure>
 		</div>
@@ -24,7 +18,31 @@
 
 <script>
 export default {
-	name: 'Contact'
+	name: 'Contact',
+	data(){
+		return{
+			contentActive: false,
+			contacts: [
+				{
+					id: 1,
+					img: '/img/peoples/people-1.jpg',
+					name: 'Ghani Husnan Afdhaluddin',
+					post: 'Co-Founder & CEO',
+					phone: '82121643817'
+				},
+				{
+					id: 2,
+					img: '/img/peoples/people-2.jpg',
+					name: 'Graha Wibisana',
+					post: 'Co-Founder & CEO',
+					phone: '81223262607'
+				}
+			]
+		}
+	},
+	mounted(){
+		this.contentActive = true
+	}
 }
 </script>
 

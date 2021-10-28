@@ -7,6 +7,10 @@
 </template>
 
 <style lang="sass">
+img
+  transition: all .25s ease
+  &:hover
+    transform: scale(1.0625)
 h2.title-text
   font-size: 1.3rem
   line-height: 1.3rem
@@ -76,4 +80,32 @@ h2.title-text
   @media screen and (min-width: 1536px)
     font-size: 1.5rem
     line-height: 1.5rem
+
+.fade-enter-active, .fade-leave-active
+  transition-duration: 0.3s
+  transition-property: height, opacity
+  transition-timing-function: ease
+  overflow: hidden
+.fade-enter-from, .fade-leave-to
+  opacity: 0
+
+.slide-up-enter-active,
+.slide-up-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active
+  transition: all 2.5s ease 1s
+.slide-up-enter-from,
+.slide-up-leave-to
+  opacity: 0
+  transform: translateY(10%)
+.slide-left-enter-from,
+.slide-left-leave-to
+  opacity: 0
+  transform: translateX(-10%)
+.slide-right-enter-from,
+.slide-right-leave-to
+  opacity: 0
+  transform: translateX(10%)
 </style>

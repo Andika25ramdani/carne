@@ -1,34 +1,57 @@
 <template>
   <section class="find-us text-white pb-16">
-    <h2 class="font-black text-center title-text pt-8 pb-16">Where To Find Us?</h2>
-		<div class="flex flex-1 flex-col sm:flex-row justify-evenly gap-y-16 mx-auto">
-			<figure class="loc-figure w-7/12 sm:w-5/12 mx-auto sm:mx-0">
-				<div class="loc-image">
-					<img src="/img/backgrounds/4.png" alt="Graha Wibisana" class="my-8">
-					<!-- <img src="https://betterstudio.com/wp-content/uploads/2019/05/1-1-instagram-1024x1024.jpg" alt="Graha Wibisana" class=""> -->
-          <div class="loc-desc">
-            <h2 class="font-black title-text pb-4">Bandung</h2>
-            <h4 class="font-normal subtitle-text">Jl. Aceh No. 45 <br> Mon - Sun <br>11.00 - 20.00</h4>
-          </div>
-				</div>
-			</figure>
-			<figure class="loc-figure w-7/12 sm:w-5/12 mx-auto sm:mx-0">
-				<div class="loc-image">
-					<img src="/img/backgrounds/5.png" alt="Graha Wibisana" class="my-8">
-					<!-- <img src="https://betterstudio.com/wp-content/uploads/2019/05/1-1-instagram-1024x1024.jpg" alt="Graha Wibisana" class=""> -->
-          <div class="loc-desc">
-            <h2 class="font-black title-text pb-4">Bandung</h2>
-            <h4 class="font-normal subtitle-text">Jl. Karasak No. 109 <br> Mon - Sun <br>11.00 - 20.00</h4>
-          </div>
-				</div>
-			</figure>
+		<transition name="slide-up" appear>
+			<h2 v-if="findTitle" class="font-black text-center title-text pt-8 pb-16">Where To Find Us?</h2>
+		</transition>
+		<div v-if="contentActive" class="flex flex-1 flex-col sm:flex-row justify-evenly gap-y-16 mx-auto">
+			<transition-group name="fade" appear>
+				<figure v-for="location in locations" :key=location.id class="loc-figure w-7/12 sm:w-5/12 mx-auto sm:mx-0">
+					<div class="loc-image">
+						<img :src=location.img :alt=location.imgAlt class="my-8">
+						<div class="loc-desc">
+							<h2 class="font-black title-text pb-4">{{ location.city }}</h2>
+							<h4 class="font-normal subtitle-text">{{ location.address }} <br> {{ location.daysOpen }} <br>{{ location.hoursOpen }}</h4>
+						</div>
+					</div>
+				</figure>
+			</transition-group>
 		</div>
   </section>
 </template>
 
 <script>
 export default {
-	name: 'FindUs'
+	name: 'FindUs',
+	data() {
+		return {
+			findTitle: false,
+			contentActive: false,
+			locations: [
+				{
+					id: 1,
+					img: '/img/backgrounds/4.png',
+					imgAlt: 'Jalan Aceh',
+					city: 'Bandung',
+					address: 'Jl. Aceh No. 45',
+					daysOpen: 'Mon - Sun',
+					hoursOpen: '11.00 - 20.00'
+				},
+				{
+					id: 2,
+					img: '/img/backgrounds/5.png',
+					imgAlt: 'Jalan Karasak',
+					city: 'Bandung',
+					address: 'Jl. Karasak No. 109',
+					daysOpen: 'Mon - Sun',
+					hoursOpen: '11.00 - 20.00'
+				},
+			]
+		}
+	},
+	mounted () {
+		this.findTitle = true
+		this.contentActive = true
+	}
 }
 </script>
 
@@ -40,6 +63,9 @@ export default {
 .loc-figure
 	max-width: 683px
 	position: relative
+	transition: .25s ease
+	&:hover
+		transform: translate(0, -5%)
 .loc-image
 	aspect-ratio: 1
 	border: 4px solid white
